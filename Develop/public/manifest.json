@@ -42,11 +42,11 @@
         "type": "image/png"
       }
     ],
-    "name": "Budget-mg",
+    "name": "Budget Tracker",
     "shortName": "Budget",
     "orientation": "portrait",
     "display": "standalone",
-    "start_url": "..index.html",
+    "start_url": "./index.html",
     "description": "Budget Tracking App",
     "background_color": "#fff",
     "theme_color": "#fff"

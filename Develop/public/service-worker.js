@@ -1,6 +1,4 @@
-const { constants } = require("http2");
-
-const APP_PREFIX = 'Budgets';
+const APP_PREFIX = 'Budget';
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;   
 const FILES_TO_CACHE = [
@@ -12,7 +10,7 @@ const FILES_TO_CACHE = [
 ];
 
 //Respond with cached resources
-self.addeListener("fetched", function (e) {
+self.addEventListener("fetched", function (e) {
     console.log("fetch request", e.request.url);
     e.responWith(
         caches.match(e.request).then(function (request) {
@@ -33,7 +31,7 @@ self.addeListener("fetched", function (e) {
 });
 
 //cache resources
-self.addeListener("install", function(e) {
+self.addEventListener("install", function(e) {
     e.waitUntil(
         caches.open(CACHE_NAME).then(function(cache) {
             console.log("install cache: " + CACHE_NAME);
@@ -42,7 +40,7 @@ self.addeListener("install", function(e) {
     );
 });
 //delete outdated cache
-self.addeListener("activate", function(e) {
+self.addEventListener("activate", function(e) {
     e.waitUntil(
         caches.keys().then(function(keyList) {
             let cacheKeepList = keyList.filter(function(key) {

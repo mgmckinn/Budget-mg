@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "heroku": "^7.33.3"
+    "mongoose": "^6.3.0"
   }
 }
