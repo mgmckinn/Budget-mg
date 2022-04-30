@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "lite-server": "lite-server"
+    "lite-server": "lite-server",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "express": "^4.17.3",
     "mongoose": "^6.3.0",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.16",
     "save": "^2.5.0"
   }
 }
